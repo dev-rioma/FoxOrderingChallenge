@@ -39,7 +39,7 @@ const Main = () => {
         </div>
       </form>
 
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center min-[1600px]:mx-80">
         {loading ? (
           <div className="py-12 text-xl font-bold">Cargando...</div>
         ) : errorMessage ? (
