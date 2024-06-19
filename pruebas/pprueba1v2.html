@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Vocales</title>
+  <script>
+    function deleteVowels(str) {
+      const vowels = /[aeiouAEIOU]/g;
+      return str.replace(vowels, '');
+    }
+
+
+    function processText() {
+      const inputText = document.getElementById('text').value;
+      const result = deleteVowels(inputText);
+      document.getElementById('result').textContent = result;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Eliminar Vocales</h2>
+  <p>Introduce una frase para eliminar las vocales:</p>
+  <input type="text" id="text" placeholder="Escribe tu frase aquí">
+  <button onclick="processText()">Eliminar Vocales</button>
+  <p>Resultado:</p>
+  <p id="result"></p>
+</body>
+
+</html>
